@@ -1,0 +1,135 @@
+<html>
+
+<head>
+    <title> Energy Consumption</title>
+
+    <link rel="stylesheet" href="style.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" -->
+        <!-- integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"> -->
+</head>
+
+<body>
+    <br>
+    <ul>
+        <!-- <li class="b"> <a href="#">Team Details</a></li> -->
+        <!-- <li class="b"><a href="#">SERVICES</a></li>
+            <li class="b"><a href="#">HOME</a></li> -->
+        <li class="a">TEAM SEVEN</li>
+    </ul>
+
+    <div class="header">
+        <br>
+        <div class="t1">
+            <b>
+                <p class="h1">The Best Solution for Your Business </p>
+            </b>
+
+            <h3 align=center class="new">We help you maximize performance and build a healthy organization.</h3>
+        </div>
+        <!-- <button type="button" class="bt">Learn More</button> -->
+    </div>
+
+    <div class="services">
+        <br>
+
+        <label class="switch">
+            <input type="checkbox" onclick="toggleTheme()">
+            <span class="slider round"></span>
+            <script>
+                function toggleTheme() {
+
+                    var element = document.body;
+                    element.classList.toggle('dark-mode');
+                }
+            </script>
+        </label>
+        <h1 align=center>OUR PREDICTION MODEL</h1>
+    
+
+        <!-- <div class="design">
+            <img src="des2.png" class="d1">
+            <h3 align=center>Design</h3>
+            <p style="text-align: center;"> <b> Deliver the best user experience with our carefully designed responsive
+                    websites and applications.</b></p>
+            <button type="button" class="b1">See portfolio</button>
+        </div> -->
+
+        <!-- <div class="development">
+            <img src="dev.jpg" class="d2">
+            <h3 align=center>Development</h3>
+            <p style="text-align: center;"> <b>
+                    You need software that works on every <br> device with latest technologies and powerful
+                    applications.
+                </b>
+            </p>
+            <button type="button" class="b2">See projects</button>
+        </div>
+
+        <div class="analytics">
+            <img src="ana.png" class="d3">
+            <h3 align=center>Analytics</h3>
+            <p style="text-align: center;">
+                <b>
+                    Consult our experts to set up proper goals and find the best stack for your need <br> applications.
+                </b>
+            </p>
+            <button type="button" class="b3">See testinomials</button>
+        </div> -->
+
+
+    </div>
+    <div class="login">
+        <h1>Boston House Price Prediction</h1>
+
+        <!-- Main Input For Receiving Query to our ML -->
+        <form action="{{ url_for('predict')}}" method="post">
+            <input type="text" name="Minimum Temperature" placeholder="Minimum Temperature" required="required" /><br>
+            <input type="text" name="Maximum Temperature" placeholder="Maximum Temperature" required="required" /><br>
+            <input type="text" name="Temperature" placeholder="Temperature" required="required" /><br>
+            <input type="text" name="Dew Point" placeholder="Dew Point" required="required" /><br>
+            <input type="text" name="Relative Humidity" placeholder="Relative Humidity" required="required" /><br>
+            <input type="text" name="Global_active_power" placeholder="Global_active_power" required="required" /><br>
+            <input type="text" name="Global_intensity" placeholder="Global_intensity" required="required" /><br>
+            <!-- <input type="text" name="DIS" placeholder="DIS" required="required" /><br>
+            <input type="text" name="RAD" placeholder="RAD" required="required" /><br>
+            <input type="text" name="TAX" placeholder="TAX" required="required" /><br>
+            <input type="text" name="PTRATIO" placeholder="PTRATIO" required="required" /><br>
+            <input type="text" name="B" placeholder="B" required="required" /><br>
+            <input type="text" name="LSTAT" placeholder="LSTAT" required="required" /><br> -->
+
+            <br>
+            <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+        </form>
+
+        <br>
+        <br>
+
+
+    </div>
+    {{prediction_text}}
+    <div class="footer">
+        <br><br>
+        <div class="t2">
+            <h1 align=center>TEAM MEMBERS</h1>
+            
+                <h3 align=center>
+                     Ayush Chaudhary <br>
+                     Akshat <br>
+                     Teeya Ojha <br>
+                     Shrey Agarwal
+                </h3>
+            </b>
+        </div>
+        <!-- <button type="button" class="b4">Learn More</button> -->
+
+    </div>
+    <div class="t3">
+        <p align=center>copyright <span>&#169;</span> teamseven@2023</p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

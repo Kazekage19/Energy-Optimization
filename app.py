@@ -4,11 +4,12 @@ import pickle
 from flask import Flask,request,app,jsonify,url_for,render_template
 import numpy as np
 import pandas as pd
-with open("objects.pkl", "rb") as f:
-    objects = pickle.load(f)
 
 app=Flask(__name__)
+
 ## Load the model
+with open("objects.pkl", "rb") as f:
+        objects = pickle.load(f)
 model=objects[0]
 scalar=objects[1]
 @app.route('/')
